@@ -113,6 +113,17 @@ body.locked {
   overflow: hidden;
 }
 
+.main-title {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 115%;
+  color: var(--blue-color);
+}
+
+.main-title span {
+  color: var(--red-color);
+}
+
 @-webkit-keyframes fade {
   0% {
     opacity: 0;
@@ -401,11 +412,19 @@ body.locked {
   .container {
     max-width: 970px;
   }
+
+  .main-title {
+    font-size: 32px;
+  }
 }
 
 @media (max-width: 767.98px) {
   .container {
     max-width: 740px;
+  }
+
+  .main-title {
+    font-size: 34px;
   }
 }
 
