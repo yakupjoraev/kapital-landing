@@ -708,7 +708,15 @@
 
   // .advertising__banner--second
 
-  &__banner--second {}
+  &__banner--second {
+    .advertising__banner-list {
+      max-width: 515px;
+    }
+
+    .advertising__banner-pic {
+      right: 0;
+    }
+  }
 
   // .advertising__dates
 

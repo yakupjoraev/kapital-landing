@@ -1,5 +1,17 @@
 @font-face {
   font-family: 'HelveticaNeueCyr';
+  src: url('../fonts/HelveticaNeueCyr-UltraLight.woff');
+  font-weight: 200;
+}
+
+@font-face {
+  font-family: 'HelveticaNeueCyr';
+  src: url('../fonts/HelveticaNeueCyr-Light.woff');
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: 'HelveticaNeueCyr';
   src: url('../fonts/helveticaneuecyr-roman.ttf');
   font-weight: 400;
 }
