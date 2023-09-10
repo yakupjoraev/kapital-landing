@@ -1,4 +1,26 @@
 // Custom scripts
+// Получаем все ссылки с классом "advertising__aside-link"
+var links = document.querySelectorAll(".advertising__aside-link");
+
+// Добавляем обработчик клика к каждой ссылке
+links.forEach(function (link) {
+  link.addEventListener("click", function (event) {
+    // Предотвращаем стандартное поведение ссылки
+    event.preventDefault();
+
+    // Получаем атрибут href ссылки (например, "#section-1")
+    var targetId = this.getAttribute("href").substring(1);
+
+    // Находим элемент с соответствующим ID
+    var targetElement = document.getElementById(targetId);
+
+    // Вычисляем позицию элемента
+    var topOffset = targetElement.getBoundingClientRect().top + window.pageYOffset;
+
+    // Плавно прокручиваем страницу к элементу с отступом
+    window.scrollTo({ top: topOffset - 40, behavior: "smooth" });
+  });
+});
 
 const openModalBtns = document.querySelectorAll('.open-modal-btn');
 const closeModalBtns = document.querySelectorAll('.close-modal-btn');
