@@ -774,11 +774,13 @@ html {
 }
 
 .advertising__lessons-list {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  -webkit-column-gap: 60px;
-     -moz-column-gap: 60px;
-          column-gap: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   row-gap: 44px;
 }
 
@@ -818,6 +820,14 @@ html {
 
 .advertising__dates .advertising__learnitem::before {
   background-color: var(--blue-color);
+}
+
+.advertising__lessons-lists {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  -webkit-column-gap: 60px;
+     -moz-column-gap: 60px;
+          column-gap: 60px;
 }
 
 .modal {
@@ -1017,7 +1027,6 @@ html {
   font-style: normal;
   font-weight: 700;
   line-height: 115%;
-  text-transform: uppercase;
   -webkit-transition: background-color 0.2s linear, border 0.2s linear, color 0.2s linear;
   -o-transition: background-color 0.2s linear, border 0.2s linear, color 0.2s linear;
   transition: background-color 0.2s linear, border 0.2s linear, color 0.2s linear;
@@ -1095,9 +1104,7 @@ html {
   font-size: 20px;
   font-weight: 500;
   line-height: 110%;
-  -webkit-columns: var(--blue-color);
-     -moz-columns: var(--blue-color);
-          columns: var(--blue-color);
+  color: var(--blue-color);
 }
 
 .footer {
@@ -1441,14 +1448,14 @@ a.footer__block-item:hover:hover {
     margin-bottom: 30px;
   }
 
-  .advertising__lessons-list {
+  .advertising__dates {
+    padding: 30px;
+  }
+
+  .advertising__lessons-lists {
     -webkit-column-gap: 40px;
        -moz-column-gap: 40px;
             column-gap: 40px;
-  }
-
-  .advertising__dates {
-    padding: 30px;
   }
 
   .modal-content__title {
@@ -1577,12 +1584,16 @@ a.footer__block-item:hover:hover {
   }
 
   .advertising__lessons-list {
-    grid-template-columns: repeat(1, 1fr);
     row-gap: 20px;
   }
 
   .advertising__dates {
     padding: 20px;
+  }
+
+  .advertising__lessons-lists {
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 20px;
   }
 
   .modal-content {

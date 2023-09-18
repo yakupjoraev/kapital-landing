@@ -670,17 +670,11 @@
   // .advertising__lessons-list
 
   &__lessons-list {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    column-gap: 60px;
+    display: flex;
+    flex-direction: column;
     row-gap: 44px;
 
-    @media (max-width: $breakpoint992) {
-      column-gap: 40px;
-    }
-
     @media (max-width: $breakpoint768) {
-      grid-template-columns: repeat(1, 1fr);
       row-gap: 20px;
     }
   }
@@ -741,5 +735,20 @@
       background-color: var(--blue-color);
     }
 
+  }
+}
+
+.advertising__lessons-lists {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 60px;
+
+  @media (max-width: $breakpoint992) {
+    column-gap: 40px;
+  }
+
+  @media (max-width: $breakpoint768) {
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 20px;
   }
 }

@@ -163,7 +163,7 @@
     font-style: normal;
     font-weight: 700;
     line-height: 115%;
-    text-transform: uppercase;
+    // text-transform: uppercase;
 
     transition: background-color 0.2s linear, border 0.2s linear, color 0.2s linear;
 
@@ -262,6 +262,6 @@
     font-size: 20px;
     font-weight: 500;
     line-height: 110%;
-    columns: var(--blue-color);
+    color: var(--blue-color);
   }
 }
